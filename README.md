@@ -24,6 +24,7 @@ load r00, 0xA
 setArg [00] r00
 call Scn.Step.Camera.CameraController.ReqQuake(int)
   - SpawnLocalEffect(Effect ID,Bone ID) =
+
 call Scn.Step.Hero.Effect.BindState()
 load r00, 0xA
 load r01, 0xB
