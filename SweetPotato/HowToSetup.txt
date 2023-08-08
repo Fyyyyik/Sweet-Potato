@@ -1,4 +1,0 @@
-Thank you for downloading Sweet Potato+!
-
-To make the program work you will need to first build the solution using Visual Studio and then you'll need to put the "functions.ini" file in bin/Debug/(whatever .net thing appears idk).
-It should then work as intended :)
