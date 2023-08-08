@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="SweetPotato\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SweetPotato\ConversionLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SweetPotato\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SweetPotato\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
