@@ -1,0 +1,64 @@
+Here's a list of function included in the "functions.ini" file that comes in the repositery :
+
+  - WaitForAnimEnd() = call GObj.Anim.WaitTillIsAnimEnd()
+  - WaitForAnimLoop() = call GObj.Anim.WaitTillIsLooped()
+  - WaitForFrame(Frame) =
+load r00, 0xA
+yield r00
+
+  - WaitForAnimFrame(Frame) =
+load r00, 0xA
+setArg [00] r00
+call GObj.Anim.WaitTillAnimFrame(int)
+
+  - ShakeChara(Frame count) =
+load r00, 0xA
+setArg [00] r00
+call Scn.Step.Chara.Shake.Request(int)
+
+  - ShakeCamera(Frame count) =
+load r00, 0xA
+setArg [00] r00
+call Scn.Step.Camera.CameraController.ReqQuake(int)
+
+  - SpawnLocalEffect(Effect ID,Bone ID) =
+call Scn.Step.Hero.Effect.BindState()
+load r00, 0xA
+load r01, 0xB
+setArg [00] r00
+setArg [01] r01
+call Scn.Step.Chara.Effect.RequestN(int,int)
+
+  - IsAffectedBySlope(true|false) = setTrue|False r00 setArg [00] r00 call Scn.Step.Chara.SlopeFit.IsValid(bool)
+SetAttackType(Priority ID,Type) =
+load r00, 0xA
+load r01, 0xB
+setArg [00] r00
+setArg [01] r01
+call Scn.Step.Chara.ObjColl.SetAttackType(int,int)
+
+  - AddHitbox(Priority ID, Bone ID, Hitbox radius, X Start offset, Y start offset, X end offset, Y end offset
+load r00, 0xA
+load r01, 0xB
+load r02, 0xCCCCCCCC
+load r03, 0xDDDDDDDD
+load r04, 0xEEEEEEEE
+load r05, 0xFFFFFFFF
+load r06, 0xGGGGGGGG
+setArg [00] r00
+setArg [01] r01
+setArg [02] r02
+setArg [03] r03
+setArg [04] r04
+setArg [05] r05
+setArg [06] r06
+call Scn.Step.Chara.ObjColl.AddAttack(int,int,float,float,float,float,float)
+
+  - StartAnim(Animation ID, Is looping (true = no loop ; false = loop), Smooth transition)
+load r00, 0xA
+setTrue|False r01
+load r02, 0xBBBBBBBB
+setArg [00] r00
+setArg [01] r01
+setArg [02] r02
+call GObj.Anim.Start(int,bool,float)
