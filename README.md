@@ -1,2 +1,2 @@
 # Sweet-Potato
-A 
+A WIP Mint editor made for beginners!
