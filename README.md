@@ -42,18 +42,33 @@ setArg [00] r00
 setArg [01] r01
 call Scn.Step.Chara.ObjColl.SetAttackType(int,int)
   - AddHitbox(Priority ID, Bone ID, Hitbox radius, X Start offset, Y start offset, X end offset, Y end offset
+
 load r00, 0xA
+
 load r01, 0xB
+
 load r02, 0xCCCCCCCC
+
 load r03, 0xDDDDDDDD
+
 load r04, 0xEEEEEEEE
+
 load r05, 0xFFFFFFFF
+
 load r06, 0xGGGGGGGG
+
 setArg [00] r00
+
 setArg [01] r01
+
 setArg [02] r02
+
 setArg [03] r03
+
 setArg [04] r04
+
 setArg [05] r05
+
 setArg [06] r06
+
 call Scn.Step.Chara.ObjColl.AddAttack(int,int,float,float,float,float,float)
